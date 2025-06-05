@@ -1,325 +1,45 @@
-/* Header Styles */
-header {
-    background-color: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 15px 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 20px;
-    z-index: 100;
-}
-
-header ul {
+body {
     display: flex;
-    justify-content: center;
-    list-style: none;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
 }
 
-header li {
-    margin: 0 15px;
-}
-
-header a {
-    text-decoration: none;
-    color: var(--dark);
-    font-weight: 600;
-    padding: 8px 15px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-header a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--accent);
-    transition: width 0.3s ease;
-}
-
-header a:hover::after {
-    width: 100%;
-}
-
-header a:hover {
-    color: var(--accent);
-}
 
 /* Main Content */
 main {
     max-width: 800px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    flex: auto;
 }
 
 article {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
-    padding: 40px;
+    padding: 1rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     position: relative;
-    overflow: hidden;
+    overflow-y: auto;
     text-align: center;
-}
-
-article::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 8px;
-    background: linear-gradient(90deg, var(--accent), var(--primary));
-}
-
-h1 {
-    color: var(--dark);
-    font-size: 2.8rem;
-    margin-bottom: 30px;
-    text-align: center;
-    position: relative;
-    padding-bottom: 15px;
-}
-
-h1::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: var(--accent);
-    border-radius: 2px;
-}
-
-/* Tweet Container */
-.tweet-container {
-    background: white;
-    border-radius: 20px;
-    padding: 30px;
-    margin: 30px 0;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.tweet-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 8px;
-    height: 100%;
-    background: linear-gradient(to bottom, var(--primary), var(--accent));
-}
-
-.tweet-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
-}
-
-.twitter-icon {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-right: 15px;
-}
-
-.tweet-author {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--dark);
-}
-
-.tweet-date {
-    font-size: 0.9rem;
-    color: #777;
-    margin-top: 5px;
-}
-
-.tweet-content {
-    font-size: 1.4rem;
-    line-height: 1.5;
-    color: #333;
-    margin-bottom: 20px;
-    padding: 0 20px;
-    font-style: italic;
-}
-
-.tweet-stats {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    color: #777;
-    font-size: 0.95rem;
-}
-
-.tweet-stat {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.tweet-stat i {
-    color: var(--accent);
-}
-
-/* Back Link */
-.back-link {
-    display: inline-block;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    color: white;
-    padding: 12px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 20px 0;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(108, 155, 207, 0.4);
-    font-size: 1.1rem;
-}
-
-.back-link:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(108, 155, 207, 0.6);
-    text-decoration: none;
-}
-
-.back-link i {
-    margin-right: 8px;
+    flex: 2;
 }
 
 /* Aside Styles */
 aside {
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 20px;
-    padding: 25px;
+    padding: 1rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     position: relative;
-    overflow: hidden;
+    overflow-y: auto;
+    flex: 1;
 }
 
-aside::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, var(--accent), var(--primary));
-}
-
-aside h3 {
-    color: var(--primary);
-    text-align: center;
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-aside h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
-    background: var(--accent);
-}
-
-aside p {
-    background-color: rgba(255, 158, 170, 0.1);
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    font-style: italic;
-    color: var(--dark);
-    border-left: 4px solid var(--accent);
-}
-
-/* Footer Styles */
+header,
 footer {
+    background-color: #eee;
+    padding: 1rem;
     text-align: center;
-    padding: 30px;
-    margin-top: 30px;
-    color: white;
-    font-size: 1.1rem;
-    position: relative;
-}
-
-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    height: 3px;
-    background: white;
-    border-radius: 2px;
-}
-
-footer a {
-    color: white;
-    text-decoration: underline;
-    font-weight: 600;
-}
-
-footer a:hover {
-    color: var(--accent);
-}
-
-/* Animation Effects */
-@keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-.floating {
-    animation: float 3s ease-in-out infinite;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header li {
-        margin: 5px 0;
-    }
-
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    .tweet-content {
-        font-size: 1.2rem;
-    }
-
-    article {
-        padding: 25px 20px;
-    }
 }
