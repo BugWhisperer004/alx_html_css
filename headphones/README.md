@@ -4,7 +4,7 @@ This project is a **fully responsive** and **accessible** web page built entirel
 
 ## 🖼️ Final Design
 
-The web page is a pixel-perfect clone of the designer file provided. You can find the reference design screens [here](#) *(replace with actual link if available)*.
+The web page is a pixel-perfect clone of the designer file provided.
 
 ## 🛠️ Tech Stack
 
