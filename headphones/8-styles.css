@@ -1,0 +1,36 @@
+/* Hamburger hidden by default */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Hide nav menu on mobile by default */
+@media screen and (max-width: 480px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #021225;
+        padding: 15px;
+        border-radius: 8px;
+        gap: 10px;
+        z-index: 999;
+    }
+
+    .nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+}
