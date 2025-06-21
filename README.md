@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 🌐 Web Page Implementation from Scratch
 
 This project is a **fully responsive** and **accessible** web page built entirely with **HTML and CSS**, based on the beautiful UI design by [Nicolas Philippot](https://www.behance.net/nicolasphilippot). The goal was to replicate the final design as accurately as possible using only vanilla HTML and CSS—**no JavaScript**, **no external libraries**, and **no CSS frameworks**.
